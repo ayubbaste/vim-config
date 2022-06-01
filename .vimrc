@@ -2,87 +2,87 @@ set nocompatible               		        " required
 filetype off	                	        " required
 set rtp+=~/.vim/bundle/Vundle.vim
 
-" -------------- Начало секции менеджера плагиинов --------------
+" -------------- Beginning of the Plugin Manager section --------------
 
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 "--------------- Внешний вид -------------
 
-Plugin 'mhartington/oceanic-next'           " Цветовая тема
-Plugin 'sonph/onehalf', { 'rtp': 'vim' }    " Цветовая тема
-Plugin 'sjl/badwolf'                        " Цветовая тема
+Plugin 'mhartington/oceanic-next'           " Color theme
+Plugin 'sonph/onehalf', { 'rtp': 'vim' }    " Color theme
+Plugin 'sjl/badwolf'                        " Color theme
 
-"--------------- Vim Airline статусная строка -------------
+"--------------- Vim Airline status bar -------------
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-"--------------- Nerd Tree файловый менеджер -------------
+"--------------- Nerd Tree file manager -------------
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 
-"--------------- Работа с кодом -------------
+"--------------- Working with code -------------
 
 "------ Django ------
 Plugin 'tweekmonster/django-plus.vim'
 
 "------ Python ------
 Plugin 'python-mode/python-mode'            " https://github.com/python-mode/python-mode
-					                        " Python mode (docs, refactor, lints, highlighting, run and ipdb and more)
+					    " Python mode (docs, refactor, lints, highlighting, run and ipdb and more)
 Plugin 'davidhalter/jedi-vim'               " Jedi-vim autocomplete plugin
 Plugin 'mitsuhiko/vim-jinja'                " Jinja support for vim
 Plugin 'mitsuhiko/vim-python-combined'	    " Combined Python 2/3 for Vim
 Plugin 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
-Plugin 'tmhedberg/SimpylFold'               " Группирует части кода 
-Plugin 'vim-scripts/indentpython.vim'       " Регулирует отступы по PEP 8
+Plugin 'tmhedberg/SimpylFold'               " Groups the code parts
+Plugin 'vim-scripts/indentpython.vim'       " Adjusts indentation by PEP 8
 Plugin 'vim-syntastic/syntastic'            " Code syntax checking plugin 
 Plugin 'nvie/vim-flake8'                    " Syntax and style checker for Python through Flake8
 Plugin 'ycm-core/YouCompleteMe'             " A code-completion engine
-Plugin 'tpope/vim-fugitive'                 " plugin for Git
-Plugin 'frazrepo/vim-rainbow'               " Закрывает открытые скобки, кавычки
+Plugin 'tpope/vim-fugitive'                 " Plugin for Git
+Plugin 'frazrepo/vim-rainbow'               " Closes open brackets, quotes
 Plugin 'ctrlpvim/ctrlp.vim'                 " Full path fuzzy file, buffer, mru, tag, ... finder for Vim
 
 
-call vundle#end()			                " required
-filetype plugin indent on   		        " required
+call vundle#end()			    " required
+filetype plugin indent on   		    " required
 
-" -------------- Конец секции менеджера плагинов --------------
+" -------------- End of the plugin manager section --------------
 
-"---------------=== Системные настройки ===-------------
+"---------------=== System settings ===-------------
 
-set nu                                      " показывать номера строк
-syntax on	                                " включить подсветку кода
-set cursorline				                " выделить активную строку
-set encoding=UTF-8                          " utf-8 по дефолту в файлах
+set nu                                      " show line numbers
+syntax on	                            " enable code highlighting
+set cursorline				    " highlight the active line
+set encoding=UTF-8                          " utf-8 by default in the files
 set incsearch 	                            " realtime highlighting 1st search word
-set hlsearch                                " подсветка результатов поиска
-set scrolloff=5                             " 5 строк при скролле за раз
-set nobackup                                " отключаем резервное копирование файлов в vim
-set nowritebackup    		                " отключаем резервное копирование редактируемых файлов
-set noswapfile       			            " отключаем swap фалов
-set novisualbell                            " отключаем мигание
-set visualbell t_vb=                        " отключаем пищалку 
-set guioptions-=m  		 	                " скрываем меню
-set guioptions-=T    			            " скрываем тулбар
-set guioptions-=r   			            " скрываем скроллбары   
+set hlsearch                                " search results highlighting
+set scrolloff=5                             " 5 lines at a time when scrolling
+set nobackup                                " disabling file backup in vim
+set nowritebackup    		            " disable backup of editable files
+set noswapfile       			    " Disable swap files
+set novisualbell                            " turn off flashing
+set visualbell t_vb=                        " turn off the squeaker 
+set guioptions-=m  		 	    " hide menu
+set guioptions-=T    			    " hide the toolbar
+set guioptions-=r   			    " hide scrollbars
 
-set smarttab			                    " включаем умные отступы
-set expandtab                               " заменяем Tab-ы пробелами 
-set tabstop=4	 	                        " задаем кол-во пробелов в 1 Tab-е
+set smarttab			            " turn on smart indents
+set expandtab                               " replace Tabs with spaces 
+set tabstop=4	 	                    " set number of spaces per Tab
 set softtabstop=0
 set shiftwidth=4
 
-set laststatus=0                            " не показывать последние команды в статусной строке
+set laststatus=0                            " do not show the last commands in the status bar
 filetype plugin on
 
-"---------------=== Настройки цвета ===-------------
+"---------------=== Color Settings ===-------------
 
-colorscheme onehalfdark 	 	            " Тема оформления ':colorscheme'
-set t_Co=256 				                " настройка цвета for vim 7 
+colorscheme onehalfdark 	 	    " design theme ':colorscheme'
+set t_Co=256 				    " color adjustment for vim 7 
 
-if (has("termguicolors"))		            " настройка цвета for vim 8
+if (has("termguicolors"))		    " color adjustmentfor vim 8
 		set termguicolors
 endif
 
@@ -92,31 +92,31 @@ if exists('+termguicolors')		            " enable true colors (24 bit)
       	set termguicolors
 endif
 
-"---------------=== Настройки Vim-Airline цветовые темы ===-------------
+"---------------=== Vim-Airline color theme settings ===-------------
 
 " https://github.com/vim-airline/vim-airline/blob/master/doc/airline.txt
 
-let g:airline_theme='base16_bright'                 " цветовая тема
-let g:airline#extensions#wordcount#disabled = 1     " отключить кол-во слов
-let g:airline_section_z = '☵  %1l/%L/%v'            " настройка секции с строк
-let g:airline_section_warning = ''                  " отключить секцию вывода ошибок
-let g:airline#extensions#tabline#enabled = 1        " включить вкладки
-let g:airline#extensions#tabline#tabs_label = ''    " кбрать слово Tabs в левом углу
-let g:airline#extensions#tabline#fnamemod = ':t'    " только имя файлов на вкладке
-let g:airline#extensions#tabline#show_tab_count = 0 " не показыать кол-во вкладок справа в углу
-let g:airline#extensions#tabline#show_tab_nr = 0    " не показывать номера кладок 
+let g:airline_theme='base16_bright'                 " color theme
+let g:airline#extensions#wordcount#disabled = 1     " disable word count
+let g:airline_section_z = '☵  %1l/%L/%v'            " setting up the rows section
+let g:airline_section_warning = ''                  " disable the error output section
+let g:airline#extensions#tabline#enabled = 1        " enable tabs
+let g:airline#extensions#tabline#tabs_label = ''    " remove the word Tabs in the left corner
+let g:airline#extensions#tabline#fnamemod = ':t'    " only the name of the files on the tab
+let g:airline#extensions#tabline#show_tab_count = 0 " do not show the number of tabs in the right corner
+let g:airline#extensions#tabline#show_tab_nr = 0    " not to show clutch numbers 
 
 "---------------=== Remove VIM background ===-------------
 
-" убираем фон
+" removing the background
 hi NonText ctermbg=none
 hi Normal guibg=NONE ctermbg=NONE
-" убираем фон номеров строк
+" remove the background of the line numbers
 hi LineNr guibg=NONE                                
 
-"---------------=== Работа с кодом ===-------------
+"---------------=== Working with code ===-------------
 
-" Подсветка кода вышедшего за границу 80 символов (Ruby / Python / js / C / C++)
+" Highlight the code that exceeds the 80-character limit (Ruby / Python / js / C / C++)
 augroup vimrc_autocmds
 		autocmd!
 		autocmd FileType ruby,python,javascript,c,cpp highlight Excess ctermbg=DarkGrey guibg=Black
@@ -126,52 +126,52 @@ augroup END
 
 "---------------=== Python-mode ===-------------
 
-let g:pymode_rope = 1                        " Включаем библиотеку Rope
-let g:pymode_lint = 1                        " Включаем linting
-let g:pymode_lint_checker = "pyflakes,pep8"  " Какие ошибки подсвечивать
-let g:pymode_lint_cwindow = 0                " Отключаем надоедливое окно ошибок и предупреждений
-let g:pymode_virtualenv = 1                  " Включаем поддержку virtualenv
-" Подсветка синтаксиса и ошибок
+let g:pymode_rope = 1                        " Enabling the Rope library
+let g:pymode_lint = 1                        " Enabling linting
+let g:pymode_lint_checker = "pyflakes,pep8"  " Which errors to highlight
+let g:pymode_lint_cwindow = 0                " Turning off the annoying error and warning window
+let g:pymode_virtualenv = 1                  " Enabling virtualenv support
+" Syntax and error highlighting
 let g:pymode_syntax = 1
 let g:pymode_syntax_all = 1
 let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
-let g:pymode_folding = 0                     " Отключаем фолдинг
-let g:pymode_breakpoint = 1                  " Загружаем плагин для вставки брейкпоинтов
-let g:pymode_breakpoint_key = 'e'    " Hot-key для установки брейкпойнта
+let g:pymode_folding = 0                     " Disabling Folding
+let g:pymode_breakpoint = 1                  " Download the plugin for inserting breakpoints
+let g:pymode_breakpoint_key = 'e'            " Hot-key to set up a breakpoint
 
-"---------------=== Группировка кода (class, def и т. п.) ===-------------
+"---------------=== Code grouping (class, def и т. п.) ===-------------
 
 set foldmethod=syntax
 set foldnestmax=10
 set foldlevel=99
 set nofoldenable
 
-" Горячая клавиша 'Пробел'
+" Hotkey 'Spacebar'
 nnoremap  za
 
-"---------------=== Разделение экрана ===-------------
+"---------------=== Splitting the screen ===-------------
 
-" :vs /way/to/file вертикальное разделение
-" :sp /way/to/file горизонтальное разделение
+" :vs /way/to/file vertical division
+" :sp /way/to/file horizontal division
 
-set splitright                              " разделять по вертикали справа
-set splitbelow				                " разделять по горизонтали снизу
+set splitright                              " split vertically to the right
+set splitbelow				    " split horizontally from the bottom
 
-" навигация по разделенному экрану
+" нnavigation on the split screen
 nnoremap   
 nnoremap  
 nnoremap  
 nnoremap  
 
-"---------------=== Вкладки ===-------------
+"---------------=== Tabs ===-------------
 
-" Следующая вкладка / Предыдущая вкладка
+" Next tab / Previous tab
 map  gt
 map  gT
 
-"---------------=== ctrlp Поиск, открытие файлов ===-------------
+"---------------=== ctrlp Search, open files ===-------------
 
 " Run :CtrlP or :CtrlP [starting-directory] to invoke CtrlP in find file mode.
 " Run :CtrlPBuffer or :CtrlPMRU to invoke CtrlP in find buffer or find MRU file mode.
@@ -188,12 +188,12 @@ map  gT
 "  Use  to create a new file and its parent directories.
 "  Use  to mark/unmark multiple files and  to open them.
 
-"---------------=== Настройка NerdTree ===-------------
+"---------------=== NerdTree settings ===-------------
 
-let NERDTreeIgnore=['\.pyc$', '\~$'] 	            " игнорировать типы файлов
-let g:NERDTreeDirArrowExpandable = '›' 	            " свои указатели
-let g:NERDTreeDirArrowCollapsible = '–'             " свои указатели
+let NERDTreeIgnore=['\.pyc$', '\~$'] 	            " ignore file types
+let g:NERDTreeDirArrowExpandable = '›' 	            " own signs
+let g:NERDTreeDirArrowCollapsible = '–'             " own signs
 
-" Горячая клавиша вкл/выкл 'Ctr + n'
+" On/Off hotkey 'Ctr + n'
 
 map  :NERDTreeToggle
