@@ -9,7 +9,8 @@ sudo apt-get install vim
 ```
 
 Remove ```vim-tiny``` if installed.
-```vim-gtk`` is for Debian.
+
+```vim-gtk``` is for Debian OS.
 
 Install Plugin Manager
 ```
